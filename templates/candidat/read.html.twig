@@ -1,0 +1,17 @@
+<h1> Liste des Candidats</h1>
+<table border="1">
+<tr>
+<th>Cin</th>
+<th>Nom - Prenom </th>
+<th>Experience</th>
+<th>Specialite</th>
+</tr>
+{% for candidat in candidats %}
+<tr>
+   <td>{{candidat.cin}}</td> 
+   <td>{{ candidat.nom}} {{candidat.prenom}} </td>
+   <td>{{candidat.experience}} </td> 
+   <td>{{candidat.specialite}} </td> 
+</tr>
+{%endfor%}
+</table>

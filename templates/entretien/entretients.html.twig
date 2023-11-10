@@ -1,0 +1,18 @@
+<h1> Liste des Entretients</h1>
+<table border="1">
+<tr>
+<th>Type</th>
+<th>Date </th>
+<th>Etat</th>
+ 
+</tr>
+{% for entretient in entretients %}
+<tr>
+   <td>{{entretient.type}}</td> 
+   <td>{{ entretient.date | date('F j, Y')}}   </td>
+   <td>{{entretient.etat}} </td> 
+ 
+   </td>
+</tr>
+{%endfor%}
+</table>

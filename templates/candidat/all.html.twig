@@ -1,0 +1,27 @@
+<h1> Liste des Candidats</h1>
+<table border="1">
+<tr>
+<th>Cin</th>
+<th>Nom - Prenom </th>
+<th>Experience</th>
+<th>Specialite</th>
+<th>Action</th>
+</tr>
+{% for candidat in candidats %}
+<tr>
+   <td>{{candidat.cin}}</td> 
+   <td>{{ candidat.nom | upper ~ "-" ~ candidat.prenom | upper}}   </td>
+   <td>{{candidat.experience}} </td> 
+   <td>{{candidat.specialite}} </td> 
+   <td>
+   <a href="{{ path('planifiercandidat', {'cin': candidat.cin}) }}">
+   Planifier
+   </a>
+   ||
+   <a href="{{ path('see_all', {'cin':candidat.cin})}}">
+   See
+   </a>
+   </td>
+</tr>
+{%endfor%}
+</table>
